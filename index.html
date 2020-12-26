@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function check() {
+				var sum = "";
+				var color = "";
+				for (var i = 0; i < 3; i++) {
+					sum += document.getElementById("raetsel1").getElementsByTagName("input")[i].value;
+				}
+				if (sum == "264") {
+					document.getElementById("raetsel1").getElementsByTagName("output")[0].innerHTML = "Rätsel richtig gelöst!";
+					color = "green";
+				} else {
+					document.getElementById("raetsel1").getElementsByTagName("output")[0].innerHTML = "";
+					color = "white";
+				}
+				for (var i = 0; i < 3; i++) {
+					sum += document.getElementById("raetsel1").getElementsByTagName("input")[i].style.backgroundColor = color;
+				}
+			}
+		</script>
+		<style>
+		body {
+			
+		}
+		#raetsel1 {
+			font-size: 16pt;
+			width: 1024px;
+			margin: auto;
+			position: relative;
+			border-left: 10px solid blue;
+			padding: 10pt;
+		}
+		#raetsel1 button {
+			background-color: #1e90ff;
+			color: white;
+			padding: 10pt;
+		}
+		#raetsel1 input {
+			font-size: 20pt;
+		}
+		#raetsel1 output {
+			color: #005500;
+			padding: 10pt;
+		}
+		</style>
+	</head>
+	
+	<body onload="check()">
+		<div id="raetsel1">
+			<h1>R&auml;tsel 1: Sprichwort</h1>
+			<a href="./Raetsel1-2020.pdf" target="_blank"><button>Rätsel anzeigen</button></a>
+			<p>Die Lösungszahl hier eintragen: </p>
+			<input type="number" min="0" max="9" size="1" value="0" onchange="check()">
+			<input type="number" min="0" max="9" size="1" value="0" onchange="check()">
+			<input type="number" min="0" max="9" size="1" value="0" onchange="check()">
+			<output></output>
+		</div>
+	</body>
+</html>
