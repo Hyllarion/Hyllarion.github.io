@@ -1,60 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script>
-			function check() {
-				var sum = "";
-				var color = "";
-				for (var i = 0; i < 3; i++) {
-					sum += document.getElementById("raetsel1").getElementsByTagName("input")[i].value;
-				}
-				if (sum == "264") {
-					document.getElementById("raetsel1").getElementsByTagName("output")[0].innerHTML = "Rätsel richtig gelöst!";
-					color = "green";
-				} else {
-					document.getElementById("raetsel1").getElementsByTagName("output")[0].innerHTML = "";
-					color = "white";
-				}
-				for (var i = 0; i < 3; i++) {
-					sum += document.getElementById("raetsel1").getElementsByTagName("input")[i].style.backgroundColor = color;
-				}
-			}
-		</script>
-		<style>
-		body {
-			
-		}
-		#raetsel1 {
-			font-size: 16pt;
-			width: 1024px;
-			margin: auto;
-			position: relative;
-			border-left: 10px solid blue;
-			padding: 10pt;
-		}
-		#raetsel1 button {
-			background-color: #1e90ff;
-			color: white;
-			padding: 10pt;
-		}
-		#raetsel1 input {
-			font-size: 20pt;
-		}
-		#raetsel1 output {
-			color: #005500;
-			padding: 10pt;
-		}
-		</style>
+		<script src="./js/main.js"></script>
+		<link rel="stylesheet" href="./css/main.css">
 	</head>
 	
-	<body onload="check()">
+	<body onload="check1()">
 		<div id="raetsel1">
 			<h1>R&auml;tsel 1: Sprichwort</h1>
-			<a href="./Raetsel1-2020.pdf" target="_blank"><button>Rätsel anzeigen</button></a>
+			<a href="./Raetsel1-2020.pdf" target="_blank"><button>Leichtes Rätsel anzeigen</button></a>
+			<a href="./Raetsel1-2020-schwer.pdf" target="_blank"><button>Schweres Rätsel anzeigen</button></a>
 			<p>Die Lösungszahl hier eintragen: </p>
-			<input type="number" min="0" max="9" size="1" value="0" onchange="check()">
-			<input type="number" min="0" max="9" size="1" value="0" onchange="check()">
-			<input type="number" min="0" max="9" size="1" value="0" onchange="check()">
+			<input type="number" min="0" max="9" size="1" value="0" onchange="check1()">
+			<input type="number" min="0" max="9" size="1" value="0" onchange="check1()">
+			<input type="number" min="0" max="9" size="1" value="0" onchange="check1()">
+			<output></output>
+		</div>
+		<div id="raetsel1zusatz">
+			<h2>Zusatzr&auml;tsel 1</h1>
+			<p>Wessen Stimme war das? (Nur für altgediente)</p>
+			<button onclick="play_audio_SA()">Noch einmal abspielen</button>
+			<input type="text" size="10" value="Name" oninput="check1add()" onfocus="{if(this.value == 'Name'){this.value = ''}}" onblur="{if(this.value == ''){this.value = 'Name'}}">
 			<output></output>
 		</div>
 	</body>

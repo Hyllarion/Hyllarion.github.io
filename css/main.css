@@ -1,0 +1,47 @@
+body {
+	font-family: Verdana, Arial, sans;
+}
+
+#raetsel1 {
+	font-size: 16pt;
+	width: 1024px;
+	margin: auto;
+	position: relative;
+	border-left: 10px solid blue;
+	border-top: 10px solid blue;
+	padding: 10pt;
+}
+#raetsel1 button {
+	background-color: #1e90ff;
+	color: white;
+	padding: 10pt;
+}
+#raetsel1 input {
+	font-size: 20pt;
+}
+#raetsel1 output {
+	color: #005500;
+	padding: 10pt;
+}
+
+#raetsel1zusatz {
+	display: none;
+	font-size: 16pt;
+	width: 1024px;
+	margin: auto;
+	position: relative;
+	border-left: 10px solid orange;
+	border-top: 10px solid orange;
+	padding: 10pt;
+}
+#raetsel1zusatz button {
+	background-color: orange;
+	padding: 10pt;
+}
+#raetsel1zusatz input {
+	font-size: 20pt;
+}
+#raetsel1zusatz output {
+	color: #005500;
+	padding: 10pt;
+}
