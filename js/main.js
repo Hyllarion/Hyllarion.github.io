@@ -1,4 +1,5 @@
 var audio_SA = new Audio("./data/audio/Sprung-Auf.mp3");
+var audio_falsch = new Audio("./data/audio/falsch.m4a");
 
 function check1() {
 	var sum = "";
@@ -7,14 +8,17 @@ function check1() {
 		sum += document.getElementById("raetsel1").getElementsByTagName("input")[i].value;
 	}
 	if (sum == "264") {
+		document.getElementById("raetsel1").getElementsByTagName("output")[0].style.color = "green";
 		document.getElementById("raetsel1").getElementsByTagName("output")[0].innerHTML = "Rätsel richtig gelöst!";
 		color = "green";
-		audio_SA.play();
+		play_audio_SA();
 		document.getElementById("raetsel1zusatz").style.display = "block";
 	} else {
-		document.getElementById("raetsel1").getElementsByTagName("output")[0].innerHTML = "";
-		color = "white";
-		document.getElementById("raetsel1zusatz").style.display = "hidden";
+		document.getElementById("raetsel1").getElementsByTagName("output")[0].style.color = "red";
+		document.getElementById("raetsel1").getElementsByTagName("output")[0].innerHTML = "Leider falsch";
+		color = "red";
+		audio_falsch.play();
+		document.getElementById("raetsel1zusatz").style.display = "none";
 	}
 	for (var i = 0; i < 3; i++) {
 		sum += document.getElementById("raetsel1").getElementsByTagName("input")[i].style.backgroundColor = color;
@@ -23,6 +27,10 @@ function check1() {
 
 function play_audio_SA() {
 	audio_SA.play();
+}
+
+function play_audio_falsch() {
+	audio_falsch.play();
 }
 
 function check1add() {

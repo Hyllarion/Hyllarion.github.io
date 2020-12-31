@@ -5,23 +5,25 @@
 		<link rel="stylesheet" href="./css/main.css">
 	</head>
 	
-	<body onload="check1()">
+	<body onload="">
 		<div id="raetsel1">
 			<h1>R&auml;tsel 1: Sprichwort</h1>
 			<a href="./data/pdf/Raetsel1-2020.pdf" target="_blank"><button>Leichtes Rätsel anzeigen</button></a>
 			<a href="./data/pdf/Raetsel1-2020-schwer.pdf" target="_blank"><button>Schweres Rätsel anzeigen</button></a>
 			<p>Die Lösungszahl hier eintragen: </p>
-			<input type="number" min="0" max="9" size="1" value="0" onchange="check1()">
-			<input type="number" min="0" max="9" size="1" value="0" onchange="check1()">
-			<input type="number" min="0" max="9" size="1" value="0" onchange="check1()">
-			<output></output>
+			<input type="number" min="0" max="9" size="1" value="0">
+			<input type="number" min="0" max="9" size="1" value="0">
+			<input type="number" min="0" max="9" size="1" value="0">
+			<output></output><br />
+			<button onclick="check1()">Zahl überprüfen</button>
 		</div>
 		<div id="raetsel1zusatz">
 			<h2>Zusatzr&auml;tsel 1</h1>
 			<p>Wessen Stimme war das? (Nur für altgediente)</p>
-			<button onclick="play_audio_SA()">Noch einmal abspielen</button>
+			<button onclick="play_audio_SA()">Noch einmal abspielen</button><br />
 			<input type="text" size="10" value="Name" oninput="check1add()" onfocus="{if(this.value == 'Name'){this.value = ''}}" onblur="{if(this.value == ''){this.value = 'Name'}}">
-			<output></output>
+			<output></output><br />
+			<button onclick="check1add()">Überprüfen</button>
 		</div>
 	</body>
 </html>
