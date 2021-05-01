@@ -1,29 +1,176 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<script src="./js/main.js"></script>
-		<link rel="stylesheet" href="./css/main.css">
-	</head>
-	
-	<body onload="">
-		<div id="raetsel1">
-			<h1>R&auml;tsel 1: Sprichwort</h1>
-			<a href="./data/pdf/Raetsel1-2020.pdf" target="_blank"><button>Leichtes Rätsel anzeigen</button></a>
-			<a href="./data/pdf/Raetsel1-2020-schwer.pdf" target="_blank"><button>Schweres Rätsel anzeigen</button></a>
-			<p>Die Lösungszahl hier eintragen: </p>
-			<input type="number" min="0" max="9" size="1" value="0">
-			<input type="number" min="0" max="9" size="1" value="0">
-			<input type="number" min="0" max="9" size="1" value="0">
-			<output></output><br />
-			<button onclick="check1()">Zahl überprüfen</button>
-		</div>
-		<div id="raetsel1zusatz">
-			<h2>Zusatzr&auml;tsel 1</h1>
-			<p>Wessen Stimme war das? (Nur für altgediente)</p>
-			<button onclick="play_audio_SA()">Noch einmal abspielen</button><br />
-			<input type="text" size="10" value="Name" oninput="check1add()" onfocus="{if(this.value == 'Name'){this.value = ''}}" onblur="{if(this.value == ''){this.value = 'Name'}}">
-			<output></output><br />
-			<button onclick="check1add()">Überprüfen</button>
-		</div>
-	</body>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Badenrätsel</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <script src='js/main.js'></script>
+</head>
+
+<body onload="init()">
+    <h1>Ordne die badischen Wörter den Bedeutungen zu</h1>
+    <div id="wrapper">
+        <table id="table1">
+            <thead>
+                <th>Badisch</th>
+                <th>Bedeutung</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="objectWords"></td>
+                    <td>
+                        <select class="objectDescriptions">
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        <button onclick="onClickCheckObjects()">
+                            Überprüfen
+                        </button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+
 </html>
