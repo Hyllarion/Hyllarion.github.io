@@ -1,27 +1,58 @@
 <html>
 
+<head>
+    <link href="css/formspree.css" rel="stylesheet">
+    <link href="css/input.css" rel="stylesheet">
+    <link href="css/radio.css" rel="stylesheet">
+    <link href="css/submit.css" rel="stylesheet">
+    <script src="js/submit.js"></script>
+</head>
+
 <body>
-    <!-- modify this form HTML and place wherever you want your form -->
-    <form action="https://formspree.io/f/moveaoaz" method="POST">
-        <label>
-            Your email:
-            <input type="email" name="email">
-        </label>
-        <br />
-        <input type="radio" name="Essen" value="Fleisch"> Fleisch
-        <br />
-        <input type="radio" name="Essen" value="Vegetarisch"> Vegetarisch
-        <br />
-        <input type="radio" name="Essen" value="Vegan"> Vegan
-        <br />
-        <label>
-            Anmerkung zu unverträglichen Lebensmitteln / Allergien:
-            <textarea name="notes"></textarea>
-        </label>
-        <!-- your other form fields go here -->
-         <br />
-        <button type="submit">Send</button>
-    </form>
+    <h1>Hochzeit Tina & Jojo</h1>
+    <!-- action="https://formspree.io/f/moveaoaz" -->
+    <div id="wrapper">
+        <form method="POST">
+            <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Dein Name" name="name" id='name' required />
+                <label for="name" class="form__label">Dein Name</label>
+            </div>
+
+            <br />
+            <br />
+
+            <div class="radio">
+                <input id="radio-1" name="Essen" type="radio" checked>
+                <label for="radio-1" class="radio-label">Fleisch</label>
+            </div>
+
+            <div class="radio">
+                <input id="radio-2" name="Essen" type="radio">
+                <label for="radio-2" class="radio-label">Vegetarisch</label>
+            </div>
+
+            <div class="radio">
+                <input id="radio-3" name="Essen" type="radio">
+                <label for="radio-3" class="radio-label">Vegan</label>
+            </div>
+
+            <br />
+
+            <label>
+                Anmerkung zu unverträglichen Lebensmitteln / Allergien:
+                <br />
+                <textarea name="notes" cols="60" rows="3"></textarea>
+            </label>
+            <br />
+            <button id="btn" type="submit">
+                Absenden
+            </button>
+        </form>
+        <div class="corner-top"></div>
+        <div class="corner-right"></div>
+        <div class="corner-bottom"></div>
+        <div class="corner-left"></div>
+    </div>
 </body>
 
 </html>
