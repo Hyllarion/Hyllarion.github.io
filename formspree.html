@@ -5,7 +5,10 @@
     <link href="css/input.css" rel="stylesheet">
     <link href="css/radio.css" rel="stylesheet">
     <link href="css/submit.css" rel="stylesheet">
+    <link href="css/select.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/submit.js"></script>
+    <script src="js/formspree.js"></script>
 </head>
 
 <body>
@@ -13,29 +16,183 @@
     <!-- action="https://formspree.io/f/moveaoaz" -->
     <div id="wrapper">
         <form method="POST">
-            <div class="form__group field">
-                <input type="input" class="form__field" placeholder="Dein Name" name="name" id='name' required />
-                <label for="name" class="form__label">Dein Name</label>
-            </div>
+            <label id="numGuests-label" for="numGuests">Anzahl Gäste:</label>
+            <select id="numGuests" onchange="changeNumGuests()">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
 
             <br />
             <br />
+            <br />
 
-            <div class="radio">
-                <input id="radio-1" name="Essen" type="radio" checked>
-                <label for="radio-1" class="radio-label">Fleisch</label>
+            <div class="input-flexbox" id="guest1">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-1" id="name1" />
+                    <label for="name1" class="form__label">Name erster Gast</label>
+                </div>
+                <div>
+                    <div class="switch">
+                        <input value="Fleisch" id="radio-1-1" name="Essen-1" type="radio" class="switch-input" checked>
+                        <label for="radio-1-1" class="switch-label switch-label-f">Fleisch</label>
+
+                        <input value="Vegetarisch" id="radio-2-1" name="Essen-1" type="radio" class="switch-input">
+                        <label for="radio-2-1" class="switch-label switch-label-n">Vegetarisch</label>
+
+                        <input value="Vegan" id="radio-3-1" name="Essen-1" type="radio" class="switch-input">
+                        <label for="radio-3-1" class="switch-label switch-label-v">Vegan</label>
+                        <span class="switch-selector"></span>
+                    </div>
+                </div>
             </div>
 
-            <div class="radio">
-                <input id="radio-2" name="Essen" type="radio">
-                <label for="radio-2" class="radio-label">Vegetarisch</label>
+            <div class="input-flexbox" id="guest2">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-2" id="name2" />
+                    <label for="name2" class="form__label">Name zweiter Gast</label>
+                </div>
+                <div>
+                    <div class="switch">
+                        <input value="Fleisch" id="radio-1-2" name="Essen-2" type="radio" class="switch-input" checked>
+                        <label for="radio-1-2" class="switch-label switch-label-f">Fleisch</label>
+
+                        <input value="Vegetarisch" id="radio-2-2" name="Essen-2" type="radio" class="switch-input">
+                        <label for="radio-2-2" class="switch-label switch-label-n">Vegetarisch</label>
+
+                        <input value="Vegan" id="radio-3-2" name="Essen-2" type="radio" class="switch-input">
+                        <label for="radio-3-2" class="switch-label switch-label-v">Vegan</label>
+                        <span class="switch-selector"></span>
+                    </div>
+                </div>
             </div>
 
-            <div class="radio">
-                <input id="radio-3" name="Essen" type="radio">
-                <label for="radio-3" class="radio-label">Vegan</label>
+            <div class="input-flexbox" id="guest3">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-3" id="name3" />
+                    <label for="name3" class="form__label">Name dritter Gast</label>
+                </div>
+                <div>
+                    <div class="switch">
+                        <input value="Fleisch" id="radio-1-3" name="Essen-3" type="radio" class="switch-input" checked>
+                        <label for="radio-1-3" class="switch-label switch-label-f">Fleisch</label>
+
+                        <input value="Vegetarisch" id="radio-2-3" name="Essen-3" type="radio" class="switch-input">
+                        <label for="radio-2-3" class="switch-label switch-label-n">Vegetarisch</label>
+
+                        <input value="Vegan" id="radio-3-3" name="Essen-3" type="radio" class="switch-input">
+                        <label for="radio-3-3" class="switch-label switch-label-v">Vegan</label>
+                        <span class="switch-selector"></span>
+                    </div>
+                </div>
             </div>
 
+            <div class="input-flexbox" id="guest4">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-4" id="name4" />
+                    <label for="name4" class="form__label">Name vierter Gast</label>
+                </div>
+                <div>
+                    <div class="switch">
+                        <input value="Fleisch" id="radio-1-4" name="Essen-4" type="radio" class="switch-input" checked>
+                        <label for="radio-1-4" class="switch-label switch-label-f">Fleisch</label>
+
+                        <input value="Vegetarisch" id="radio-2-4" name="Essen-4" type="radio" class="switch-input">
+                        <label for="radio-2-4" class="switch-label switch-label-n">Vegetarisch</label>
+
+                        <input value="Vegan" id="radio-3-4" name="Essen-4" type="radio" class="switch-input">
+                        <label for="radio-3-4" class="switch-label switch-label-v">Vegan</label>
+                        <span class="switch-selector"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-flexbox" id="guest5">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-5" id="name5" />
+                    <label for="name5" class="form__label">Name fünfter Gast</label>
+                </div>
+                <div>
+                    <div class="switch">
+                        <input value="Fleisch" id="radio-1-5" name="Essen-5" type="radio" class="switch-input" checked>
+                        <label for="radio-1-5" class="switch-label switch-label-f">Fleisch</label>
+
+                        <input value="Vegetarisch" id="radio-2-5" name="Essen-5" type="radio" class="switch-input">
+                        <label for="radio-2-5" class="switch-label switch-label-n">Vegetarisch</label>
+
+                        <input value="Vegan" id="radio-3-5" name="Essen-5" type="radio" class="switch-input">
+                        <label for="radio-3-5" class="switch-label switch-label-v">Vegan</label>
+                        <span class="switch-selector"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-flexbox" id="guest6">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-6" id="name6" />
+                    <label for="name6" class="form__label">Name sechster Gast</label>
+                </div>
+                <div>
+                    <div class="switch">
+                        <input value="Fleisch" id="radio-1-6" name="Essen-6" type="radio" class="switch-input" checked>
+                        <label for="radio-1-6" class="switch-label switch-label-f">Fleisch</label>
+
+                        <input value="Vegetarisch" id="radio-2-6" name="Essen-6" type="radio" class="switch-input">
+                        <label for="radio-2-6" class="switch-label switch-label-n">Vegetarisch</label>
+
+                        <input value="Vegan" id="radio-3-6" name="Essen-6" type="radio" class="switch-input">
+                        <label for="radio-3-6" class="switch-label switch-label-v">Vegan</label>
+                        <span class="switch-selector"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-flexbox" id="guest7">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-7" id="name7" />
+                    <label for="name7" class="form__label">Name siebter Gast</label>
+                </div>
+                <div>
+                    <div class="switch">
+                        <input value="Fleisch" id="radio-1-7" name="Essen-7" type="radio" class="switch-input" checked>
+                        <label for="radio-1-7" class="switch-label switch-label-f">Fleisch</label>
+
+                        <input value="Vegetarisch" id="radio-2-7" name="Essen-7" type="radio" class="switch-input">
+                        <label for="radio-2-7" class="switch-label switch-label-n">Vegetarisch</label>
+
+                        <input value="Vegan" id="radio-3-7" name="Essen-7" type="radio" class="switch-input">
+                        <label for="radio-3-7" class="switch-label switch-label-v">Vegan</label>
+                        <span class="switch-selector"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-flexbox" id="guest8">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-8" id="name8" />
+                    <label for="name8" class="form__label">Name achter Gast</label>
+                </div>
+                <div>
+                    <div class="switch">
+                        <input value="Fleisch" id="radio-1-8" name="Essen-8" type="radio" class="switch-input" checked>
+                        <label for="radio-1-8" class="switch-label switch-label-f">Fleisch</label>
+
+                        <input value="Vegetarisch" id="radio-2-8" name="Essen-8" type="radio" class="switch-input">
+                        <label for="radio-2-8" class="switch-label switch-label-n">Vegetarisch</label>
+
+                        <input value="Vegan" id="radio-3-8" name="Essen-8" type="radio" class="switch-input">
+                        <label for="radio-3-8" class="switch-label switch-label-v">Vegan</label>
+                        <span class="switch-selector"></span>
+                    </div>
+                </div>
+            </div>
+
+            <br />
             <br />
 
             <label>
@@ -53,6 +210,7 @@
         <div class="corner-bottom"></div>
         <div class="corner-left"></div>
     </div>
+
 </body>
 
 </html>
