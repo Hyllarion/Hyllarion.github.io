@@ -8,7 +8,7 @@
 #numGuests {
     /* Reset */
     appearance: none;
-    border: 0;
+    border: 1px solid gray;
     outline: 0;
     font: inherit;
     /* Personalize */
@@ -39,5 +39,44 @@
 }
 
 #numGuests-label {
+    margin: 0 1.2em 0 0;
+}
+
+#duration {
+    /* Reset */
+    appearance: none;
+    border: 1px solid gray;
+    outline: 0;
+    font: inherit;
+    /* Personalize */
+    width: 14rem;
+
+    padding: 0.4em 2em 0.4em 2.2em;
+    background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em, linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+    color: black;
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin: 0.4em 0;
+    /* Remove IE arrow */
+    /* Remove focus outline */
+    /* <option> colors */
+}
+
+#duration::-ms-expand {
+    display: none;
+}
+
+#duration:focus {
+    outline: none;
+}
+
+#duration option {
+    color: inherit;
+    background-color: var(--option-bg);
+    border-radius: none;
+}
+
+#duration-label {
     margin: 0 1.2em 0 0;
 }
