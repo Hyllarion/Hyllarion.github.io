@@ -11,7 +11,9 @@
     border-radius: 4px;
     background-color: white;
     cursor: pointer;
-    
+    -webkit-appearance: none;  /* Verhindert den Safari-Button-Stil auf iOS */
+    touch-action: manipulation; /* Verhindert doppelte Ausführung von Aktionen auf Touchscreen */
+    tap-highlight-color: transparent; /* Entfernt das Standard-Tap-Highlight in Safari */
 }
 
 #sendicon {
