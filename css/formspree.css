@@ -148,6 +148,8 @@ textarea:focus {
 }
 
 #email {
+    width: 400px;
+    min-width: 400px;
     width: 60%;
     padding: 0.4em 0.6em;
     box-sizing: border-box;
