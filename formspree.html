@@ -29,7 +29,7 @@
         </div>
         <form method="POST">
             <label id="numGuests-label" for="numGuests">Anzahl Gäste:</label>
-            <select id="numGuests" onchange="changeNumGuests()">
+            <select id="numGuests" name="Anzahl" onchange="changeNumGuests()">
                 <option value="1" selected>1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -210,7 +210,7 @@
             <label>
                 Anmerkungen zu Allergien o. Ä.:
                 <br />
-                <textarea name="notes" cols="60" rows="3"></textarea>
+                <textarea name="Anmerkungen" cols="60" rows="3"></textarea>
             </label>
 
             <div class="spaceWrapper">
@@ -221,7 +221,7 @@
             <label>
                 Wir würden gerne folgendes zum Abend beitragen:
                 <br />
-                <textarea name="notes" cols="60" rows="3"></textarea>
+                <textarea name="Beitrag" cols="60" rows="3"></textarea>
             </label>
 
             <label id="duration-label" for="duration">Geschätzte Dauer:</label>
@@ -241,9 +241,9 @@
             </div>
 
             <label>
-                Wir bringen mit:
+                Wir bringen zum Sektempfang / als Dessert mit:
                 <br />
-                <textarea name="notes" cols="60" rows="3"></textarea>
+                <textarea name="Essen" cols="60" rows="3" placeholder="Fingerfood, trockener Kuchen, ..."></textarea>
             </label>
 
             <div class="spaceWrapper">
@@ -251,7 +251,7 @@
                 <div class="spacerh"></div>
             </div>
 
-            <label for="email">Eure E-Mail Adresse:</label>
+            <label for="email">E-Mail Adresse:</label>
             <br />
             <input name="E-Mail" type="email" id="email">
 
