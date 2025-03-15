@@ -6,6 +6,7 @@
     <link href="css/radio.css" rel="stylesheet">
     <link href="css/submit.css" rel="stylesheet">
     <link href="css/select.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/submit.js"></script>
     <script src="js/formspree.js"></script>
@@ -244,8 +245,23 @@
                 <br />
                 <textarea name="notes" cols="60" rows="3"></textarea>
             </label>
+
+            <div class="spaceWrapper">
+                <div class="spacerv"></div>
+                <div class="spacerh"></div>
+            </div>
+
+            <label for="email">Eure E-Mail Adresse:</label>
             <br />
+            <input name="E-Mail" type="email" id="email">
+
+            <div class="spaceWrapper">
+                <div class="spacerv"></div>
+                <div class="spacerh"></div>
+            </div>
+
             <button id="btn" type="submit">
+                <i id="sendicon" class="fa fa-paper-plane-o"></i>
                 Absenden
             </button>
         </form>

@@ -34,16 +34,19 @@
 .switch-input:checked+.switch-label-f~.switch-selector {
     transform: translateX(0%);
     background-color: #11998ebd;
+    background-image: linear-gradient(to right, #11998ebd 0%, #38ef7d 300%);
 }
 
 .switch-input:checked+.switch-label-n~.switch-selector {
     transform: translateX(100%);
     background-color: #11998ebd;
+    background-image: linear-gradient(to right, #11998ebd -100%, #38ef7d 200%);
 }
 
 .switch-input:checked+.switch-label-v~.switch-selector {
     transform: translateX(200%);
     background-color: #11998ebd;
+    background-image: linear-gradient(to right, #11998ebd -200%, #38ef7d 100%);
 }
 
 

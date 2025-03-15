@@ -14,7 +14,7 @@
     /* Personalize */
     width: 10rem;
     padding: 0.4em 2em 0.4em 2.2em;
-    background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em, linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+    background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em, linear-gradient(to left, #2bc688da 0em, #2bc688 1.5em, #2bc688da 3em, var(--select-bg) 3em);
     color: black;
     border-radius: 0.25em;
     box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
@@ -51,8 +51,8 @@
     /* Personalize */
     width: 14rem;
 
-    padding: 0.4em 2em 0.4em 2.2em;
-    background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em, linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+    padding: 0.4em 2em 0.4em 1.2em;
+    background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em, linear-gradient(to left, #2bc688da 0em, #2bc688 1.5em, #2bc688da 3em, var(--select-bg) 3em);
     color: black;
     border-radius: 0.25em;
     box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
