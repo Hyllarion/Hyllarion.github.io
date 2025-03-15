@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Send+Flowers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Tangerine&display=swap');
 
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     width: 800px;
@@ -25,7 +31,7 @@ h1 {
     margin-bottom: 2em;
 }
 
-form{
+form {
     position: relative;
     z-index: 100;
 }
