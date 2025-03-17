@@ -21,7 +21,16 @@ h1 {
     font-size: 5em;
     text-align: center;
     margin: 0;
-    padding: 0.6em 0 0.6em 0;
+    padding: 0.6em 0 0.1em 0;
+}
+
+h2 {
+    font-family: "Tangerine", cursive;
+    font-weight: 400;
+    font-size: 3em;
+    text-align: center;
+    margin: 0;
+    padding: 0.1em 0 0.6em 0;
 }
 
 #wrapper {
@@ -117,6 +126,10 @@ form {
     left: calc(-1.6em - 16px);
     border-bottom: 1px solid #ccc;
     z-index: -1;
+}
+
+.absage {
+    font-size: 0.3em;
 }
 
 .hiddenGuest {

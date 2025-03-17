@@ -15,14 +15,13 @@
 
 <body>
     <h1>Hochzeit Tina & Jojo</h1>
+    <h2>19.07.2025</h2>
     <!-- action="https://formspree.io/f/moveaoaz" -->
     <div id="wrapper">
         <div class="intro">
             <p class="pe">Liebe Hochzeitsgäste,</p>
             <p>bitte gebt unseren Trauzeugen über folgendes Formular Rückmeldung,<br />
-                wer von euch (inkl. Kinder) mit uns diesen Tag feiern wird.</p>
-            <p>Weiter unten könnt ihr auch angeben, ob und was ihr gerne zum Abendprogramm in kulinarischer oder
-                unterhaltsamer Art beitragen möchtet.</p>
+                wer von Euch (inkl. Kinder) mit uns diesen Tag feiern wird.</p>
         </div>
         <div class="spaceWrapper">
             <div class="spacerv"></div>
@@ -31,6 +30,7 @@
         <form method="POST" action="https://formspree.io/f/moveaoaz">
             <label id="numGuests-label" for="numGuests">Anzahl Gäste:</label>
             <select id="numGuests" name="Anzahl" onchange="changeNumGuests()">
+                <option value="0">Ich/Wir komme(n) leider nicht</option>
                 <option value="1" selected>1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -44,6 +44,12 @@
             <br />
             <br />
             <br />
+
+            <label id="absage-name" style="display: none;">
+                Name:
+                <br />
+                <textarea name="AbsageName" cols="60" rows="3"></textarea>
+            </label>
 
             <div class="input-flexbox" id="guest1">
                 <div class="form__group field">
@@ -208,51 +214,53 @@
             <br />
             <br />
 
-            <label>
-                Anmerkungen zu Allergien o. Ä.:
+            <label id="anmerkungen">
+                Anmerkungen zu Allergien o. Ä. (mit Name):
                 <br />
                 <textarea name="Anmerkungen" cols="60" rows="3"></textarea>
             </label>
 
-            <div class="spaceWrapper">
+            <div id="anmerkungen-trenner" class="spaceWrapper">
                 <div class="spacerv"></div>
                 <div class="spacerh"></div>
             </div>
 
-            <label>
-                Wir würden gerne folgendes zum Abend beitragen:
+            <label id="beitrag">
+                Möchtet Ihr etwas zum Abendprogramm beitragen?
                 <br />
-                <textarea name="Beitrag" cols="60" rows="3"></textarea>
+                <textarea name="Beitrag" cols="60" rows="3" placeholder="Was?"></textarea>
             </label>
 
-            <label id="duration-label" for="duration">Geschätzte Dauer:</label>
-            <select id="duration" name="Dauer-Beitrag">
-                <option value="5" selected>5 Minuten</option>
-                <option value="10">10 Minuten</option>
-                <option value="15">15 Minuten</option>
-                <option value="20">20 Minuten</option>
-                <option value="25">25 Minuten</option>
-                <option value="30">30 Minuten</option>
-                <option value=">30">> 30 Minuten</option>
-            </select>
-
-            <div class="spaceWrapper">
-                <div class="spacerv"></div>
-                <div class="spacerh"></div>
-            </div>
-
-            <label>
-                Wir bringen zum Sektempfang / als Dessert mit:
-                <br />
-                <textarea name="Mitbringsel" cols="60" rows="3" placeholder="Fingerfood, trockener Kuchen, ..."></textarea>
+            <label id="duration-label" for="duration">Geschätzte Dauer:
+                <select id="duration" name="Dauer-Beitrag">
+                    <option value="5" selected>5 Minuten</option>
+                    <option value="10">10 Minuten</option>
+                    <option value="15">15 Minuten</option>
+                    <option value="20">20 Minuten</option>
+                    <option value="25">25 Minuten</option>
+                    <option value="30">30 Minuten</option>
+                    <option value=">30">> 30 Minuten</option>
+                </select>
             </label>
 
-            <div class="spaceWrapper">
+            <div id="beitrag-trenner" class="spaceWrapper">
                 <div class="spacerv"></div>
                 <div class="spacerh"></div>
             </div>
 
-            <label for="email">E-Mail Adresse:</label>
+            <label id="mitbringsel">
+                Über einen kulinarischen Beitrag zum Sektempfang (Fingerfood / trockener Kuchen) oder zum Dessert
+                (abends) würden wir uns freuen. [Kühlmöglichkeiten vorhanden]
+                <br />
+                <textarea name="Mitbringsel" cols="60" rows="3" placeholder="Was?"></textarea>
+            </label>
+
+            <div id="mitbringsel-trenner" class="spaceWrapper">
+                <div class="spacerv"></div>
+                <div class="spacerh"></div>
+            </div>
+
+            <label for="email">Eure E-Mail Adresse:</label>
             <br />
             <input name="E-Mail" type="email" id="email">
 
