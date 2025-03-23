@@ -1,6 +1,7 @@
 function changeNumGuests() {
     let numGuests = $("#numGuests").val();
     if (numGuests == 0) {
+        $("#textAbsage").attr("name", "AbsageName");
         document.getElementById("numGuests").style.width = "25rem";
         document.getElementById("absage-name").style.display = "block";
         document.getElementById("anmerkungen").style.display = "none";
@@ -11,6 +12,7 @@ function changeNumGuests() {
         document.getElementById("mitbringsel").style.display = "none";
         document.getElementById("mitbringsel-trenner").style.display = "none";
     } else {
+        $("#textAbsage").removeAttr("name");
         document.getElementById("numGuests").style.width = "10rem";
         document.getElementById("absage-name").style.display = "none";
         document.getElementById("anmerkungen").style.display = "block";
@@ -25,8 +27,16 @@ function changeNumGuests() {
     for (let i = 1; i <= 8; i++) {
         if (i <= numGuests) {
             $("#guest" + i).removeClass("hiddenGuest");
+            $("#name" + i).attr("name", "name" + i);
+            $("#radio-1-" + i).attr("name", "Essen-" + i);
+            $("#radio-2-" + i).attr("name", "Essen-" + i);
+            $("#radio-3-" + i).attr("name", "Essen-" + i);
         } else {
             $("#guest" + i).addClass("hiddenGuest");
+            $("#name" + i).removeAttr("name");
+            $("#radio-1-" + i).removeAttr("name");
+            $("#radio-2-" + i).removeAttr("name");
+            $("#radio-3-" + i).removeAttr("name");
         }
     }
 }
